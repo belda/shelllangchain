@@ -1,4 +1,5 @@
 requests
 langchain
+openai
 pyperclip
-dotenv
+python-dotenv
