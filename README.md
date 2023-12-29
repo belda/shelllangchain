@@ -1,7 +1,7 @@
 # GPT for your terminal
 
 * Do you want to use ChatGPT in your terminal? Well, now you can!
-* Do you always forget the syntax for a for loop? Well, now you can ask GPT to write it for you!
+* Do you always forget the syntax for a for loop? Well, now you can ask GPT to write it for you! 
 * It is a superfast way to get your commands quickly written for you.
 * Use ChatGPT in bash or zsh.
 
@@ -10,7 +10,7 @@ Unleash the Power of GPT in Your Terminal. A Python-based tool that integrates O
 ## How it works
 Using langchain the command takes all the arguments and passes that to the OpenAI API. 
 The response is then parsed and the command is printed to the terminal including a short description of what it does. 
-The command is also copied to your clipboard so you can paste it in your terminal.
+The command is also copied to your clipboard and so you can paste it in your terminal.
 
 NOTE: no data is shared from your system, only the natural language you pass it is sent to the OpenAI API.
 
