@@ -20,11 +20,11 @@ def get_bash_command(prompt : str) -> [str, str]:
     ''' returns the bash command and explanation for the commands parameters '''
     chat = ChatOpenAI()
     messages = [
-        SystemMessage(content="""  You are a assistant and an expert on linux commands and bash. When asked in natural language, you
+        SystemMessage(content="""  You are an assistant and an expert on linux commands and bash. When asked in natural language, you
                         will provide the most fitting command and an explanation of the command workings in a structured way."""),
         HumanMessage(content="list all files in a current directory including their information"),
         AIMessage(content=json.dumps({"command": "ls -la",
-                                      "explanation": "All files are listed using the inbuilt command \033[0;32mls\033[0m (is short for list).\n\t\033[0;32m-a\033[0m means all files\n\t\033[0;32m-l\033[0m means long format, \033[0;32m-l\033[0m means long format\n\t\033[0;32m-a\033[0m means all files"})),
+                                      "explanation": "All files are listed using the inbuilt command \033[0;32mls\033[0m (is short for list).\n\t\033[0;32m-a\033[0m means all files\n\t\033[0;32m-l\033[0m means long format, \033[0;32m-l\033[0m means long format"})),
         HumanMessage(content=prompt)
     ]
     rsp = json.loads(chat(messages).content)
@@ -32,7 +32,7 @@ def get_bash_command(prompt : str) -> [str, str]:
 
 
 def main():
-    ''' parses the arguments and processes fiels '''
+    ''' parses the arguments and executes the main logic '''
     if OPENAI_API_KEY == '':
         print("You need to have your OPENAI_API_KEY defined in your environment variables", file=sys.stderr)
         sys.exit(1)
