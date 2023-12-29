@@ -38,6 +38,10 @@ def main():
         sys.exit(1)
 
     prompt = (" ").join(sys.argv[1:])
+    if prompt.strip() == "":
+        print("You need to provide the description of the command, otherwise, there is nothing to be helped with", file=sys.stderr)
+        sys.exit(1)
+
     command, explanation = get_bash_command(prompt)
     pyperclip.copy(command)
     print(f"\033[0;32m{command}\033[0m\n\n{explanation}\n\n")

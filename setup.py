@@ -8,10 +8,11 @@ def load_requirements(filename='requirements.txt'):
     with open(filename, 'r') as file:
         return [line.strip() for line in file.readlines() if not line.startswith('#') and line.strip()]
 
+from version import __version__
 
 setuptools.setup(
     name="shelllangchain",
-    version="0.1.7",
+    version=__version__,
     author="Belda",
     author_email="jakub.belescak@centrum.cz",
     description="Natural language to shell command converter",
